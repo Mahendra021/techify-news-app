@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:news_app/app/modules/home/views/bookmark_page.dart';
 import 'package:news_app/app/modules/home/views/home_page.dart';
-import 'package:news_app/app/modules/home/views/search_page.dart';
 import 'package:news_app/app/modules/home/views/setting_page.dart';
 import 'package:news_app/widget/custom_text.dart';
 
@@ -29,8 +27,6 @@ class HomeView extends GetView<HomeController> {
           controller: controller.pageController,
           children: const [
             HomePage(),
-            SearchPage(),
-            BookmarkPage(),
             SettingPage(),
           ],
         ),
@@ -46,14 +42,6 @@ class HomeView extends GetView<HomeController> {
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search_outlined),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.bookmark),
               label: "",
             ),
             BottomNavigationBarItem(
